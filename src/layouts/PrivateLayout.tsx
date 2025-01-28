@@ -11,7 +11,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { AppSidebar } from "@/components/navigation/app-sidebar"
-import { Outlet } from 'react-router-dom';
+import { Outlet } from "react-router-dom"
 
 export default function PrivateLayout() {
   const [loading, setLoading] = useState<boolean>(true)
@@ -38,17 +38,6 @@ export default function PrivateLayout() {
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="ml-4" />
             <Separator orientation="vertical" className="h-4 mr-2" />
-            <Breadcrumb>
-              <BreadcrumbList>
-                <BreadcrumbItem className="hidden md:block">
-                  <BreadcrumbLink href="#">Building Your Application</BreadcrumbLink>
-                </BreadcrumbItem>
-                <BreadcrumbSeparator className="hidden md:block" />
-                <BreadcrumbItem>
-                  <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-                </BreadcrumbItem>
-              </BreadcrumbList>
-            </Breadcrumb>
           </div>
           <div
             className={`absolute top-4 right-4 transition-all duration-300 ease-in-out ${

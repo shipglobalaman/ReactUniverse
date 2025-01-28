@@ -1,4 +1,6 @@
-import Home from "@/Home"
+import UseContext from "@/components/pages/UseContext"
+import UseEffect from "@/components/pages/UseEffect"
+import UseState from "@/components/pages/UseState"
 import PrivateLayout from "@/layouts/PrivateLayout"
 
 export default function PrivateRoutes() {
@@ -6,7 +8,9 @@ export default function PrivateRoutes() {
     path: "/",
     element: <PrivateLayout />,
     children: [
-      { path: "", element: <Home /> }, //? Welcome Screen
+      { path: "use-state", element: <UseState /> }, //? Welcome Screen
+      { path: "use-effect", element: <UseEffect /> }, //? Welcome Screen
+      { path: "use-context", element: <UseContext /> }, //? Welcome Screen
     ],
   }
 }
