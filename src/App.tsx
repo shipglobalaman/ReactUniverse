@@ -1,12 +1,9 @@
-import { Button } from "./components/ui/button";
+import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import PrivateRoutes from "./routes/PrivateRoutes"
 
 function App() {
-  return (
-    <>
-      <h1 className="text-5xl">hello word</h1>
-       <Button>hello</Button>
-    </>
-  );
+  const router = createBrowserRouter([PrivateRoutes()])
+  return <RouterProvider router={router} />
 }
 
-export default App;
+export default App
